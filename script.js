@@ -81,7 +81,7 @@ function printCard (team) {
 
     for (let i=0; i<team.length; i++) {
 
-        document.getElementById("cardContainer").innerHTML += '<div class="col-3 m-3 card bg-black pb-2 pt-2"><img src=' + "./img/" + team[i].photo + ' class="card-img-top" alt="..."><div class="card-body text-center text-bg-light"><h3>' + team[i].name + '</h3><h4>' + team[i].role + '</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p></div></div>'
+        document.getElementById("cardContainer").innerHTML += '<div class="col-12 col-md-4 col-xl-3 m-3 card bg-black pb-2 pt-2"><img src=' + "./img/" + team[i].photo + ' class="card-img-top" alt="..."><div class="card-body text-center text-bg-light"><h3>' + team[i].name + '</h3><h4>' + team[i].role + '</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p></div></div>'
     };
 
 }

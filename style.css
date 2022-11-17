@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: fredoka;
+}
+
+p {
+    color: rgb(75, 75, 75);
+}
+
+h4 {
+    color: rgb(56, 54, 54);
+}
