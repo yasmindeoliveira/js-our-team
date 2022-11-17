@@ -6,44 +6,44 @@ let team = [
 
     barnett ={
 
-        nome: "Wayne Barnett",
-        ruolo: "Founder & CEO",
-        foto: "wayne-barnett-founder-ceo.jpg"
+        name: "Wayne Barnett",
+        role: "Founder & CEO",
+        photo: "wayne-barnett-founder-ceo.jpg"
     },
     
     carol ={
     
-        nome: "Angela Caroll",
-        ruolo: "Chief Editor",
-        foto: "angela-caroll-chief-editor.jpg"
+        name: "Angela Caroll",
+        role: "Chief Editor",
+        photo: "angela-caroll-chief-editor.jpg"
     },
     
     gordon ={
     
-        nome: "Walter Gordon",
-        ruolo: "Office Manager",
-        foto: "walter-gordon-office-manager.jpg"
+        name: "Walter Gordon",
+        role: "Office Manager",
+        photo: "walter-gordon-office-manager.jpg"
     },
     
     lopez ={
     
-        nome: "Angela Lopez",
-        ruolo: "Social Media Manager",
-        foto: "angela-lopez-social-media-manager.jpg"
+        name: "Angela Lopez",
+        role: "Social Media Manager",
+        photo: "angela-lopez-social-media-manager.jpg"
     },
     
     estrada ={
     
-        nome: "Scott Estrada",
-        ruolo: "Developer",
-        foto: "scott-estrada-developer.jpg"
+        name: "Scott Estrada",
+        role: "Developer",
+        photo: "scott-estrada-developer.jpg"
     },
     
     ramos ={
     
-        nome: "Barbara Ramos",
-        ruolo: "Graphic Designer",
-        foto: "barbara-ramos-graphic-designer.jpg"
+        name: "Barbara Ramos",
+        role: "Graphic Designer",
+        photo: "barbara-ramos-graphic-designer.jpg"
     }
 
 ];
@@ -51,11 +51,12 @@ let team = [
 //MILESTONE 1: Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
 
-stampaTeam (team);
+printTeam (team);
+printCard (team)
 
 
 
-function stampaTeam (team) {
+function printTeam (team) {
 
     for (let i=0; i<team.length; i++) {
 
@@ -63,13 +64,29 @@ function stampaTeam (team) {
             `
             -------------------MEMBRO------------------------
 
-                Nome: ${team[i].nome}
-                Ruolo: ${team[i].ruolo}
-                Foto: ${team[i].foto}
-                
+                Nome: ${team[i].name}
+                Ruolo: ${team[i].role}
+                Foto: ${team[i].photo}
+
             -------------------------------------------------
             `
         )
     };
     
 }
+
+//MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+function printCard (team) {
+
+    for (let i=0; i<team.length; i++) {
+
+        document.getElementById("cardContainer").innerHTML = '<div class="card bg-black pb-2 pt-2" style="width: 18rem;"><img src=' + "./img/" + team[i].photo + ' class="card-img-top" alt="..."><div class="card-body text-center text-bg-light"><h3>' + team[i].name + '</h3><h4>' + team[i].role + '</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p></div></div>'
+    };
+
+}
+
+
+
+
+
